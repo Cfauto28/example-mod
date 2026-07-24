@@ -1,0 +1,131 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "net.ornithemc",
+    "module": "ploceus",
+    "version": "1.17.5",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.5.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "ploceus-1.17.5.jar",
+          "url": "ploceus-1.17.5.jar",
+          "size": 105342,
+          "sha512": "267e42992f4937391efe960a5c850ca85f04de21287ee2d0b580baf5a87170d78c6441d21af99b82e7e3d3c50c815f81817e0a6b1abed862dc34e5c1b1aa6c5a",
+          "sha256": "a8bf08e728bc7e124356cce7e4cdac84137dd56afcd65febc081d7b5576b5ce1",
+          "sha1": "67b638aa03af283d4481dcf57cfd3ab1ae4ebd78",
+          "md5": "4377597e7b089ca9237981be9bade0b5"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.ornithemc",
+          "module": "mapping-utils",
+          "version": {
+            "requires": "0.19.2"
+          }
+        },
+        {
+          "group": "net.ornithemc",
+          "module": "condor",
+          "version": {
+            "requires": "1.4.5"
+          }
+        },
+        {
+          "group": "net.ornithemc",
+          "module": "exceptor",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "net.ornithemc",
+          "module": "preen",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "net.ornithemc",
+          "module": "nester",
+          "version": {
+            "requires": "1.4.0"
+          }
+        },
+        {
+          "group": "io.github.gaming32",
+          "module": "signature-changer",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "com.vdurmont",
+          "module": "semver4j",
+          "version": {
+            "requires": "3.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ploceus-1.17.5.jar",
+          "url": "ploceus-1.17.5.jar",
+          "size": 105342,
+          "sha512": "267e42992f4937391efe960a5c850ca85f04de21287ee2d0b580baf5a87170d78c6441d21af99b82e7e3d3c50c815f81817e0a6b1abed862dc34e5c1b1aa6c5a",
+          "sha256": "a8bf08e728bc7e124356cce7e4cdac84137dd56afcd65febc081d7b5576b5ce1",
+          "sha1": "67b638aa03af283d4481dcf57cfd3ab1ae4ebd78",
+          "md5": "4377597e7b089ca9237981be9bade0b5"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ploceus-1.17.5-sources.jar",
+          "url": "ploceus-1.17.5-sources.jar",
+          "size": 42376,
+          "sha512": "6cdc946d6596fb24171a3f68df269b601a6e1427606f8f6437691554530eac1e287a9a8737ff93e85b3223135ad02d49c5d390039f4f9b5aa4b6d2e7df07b8ae",
+          "sha256": "187f41832cae08269f8f7760520a5cf00ffd9bbd9fb0175b92285841ce029fa1",
+          "sha1": "5388c0cbd2aa1dda565fc795e96717cb2ad0cf49",
+          "md5": "53ee0c449fae9327134366e1430c7773"
+        }
+      ]
+    }
+  ]
+}
