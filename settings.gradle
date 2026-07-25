@@ -1,7 +1,7 @@
 pluginManagement {
 	repositories {
 		maven {
-			name = "CypressFabric"
+			name = "Local"
 			url uri("${rootProject.projectDir}/libs")
 		}
 		mavenLocal()
@@ -28,3 +28,4 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
+

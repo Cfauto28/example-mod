@@ -34,7 +34,7 @@ dependencies {
 	exceptions ploceus.raven(project.raven_build)
 	signatures ploceus.sparrow(project.sparrow_build)
 	nests ploceus.nests(project.nests_build)*/
-	mappings "net:ornithemc:feather-gen2:${project.minecraft_version}+build.1"
+	mappings files('libs/net/ornithemc/feather-gen2/a1.0.16.05_20+build.1/feather-gen2-a1.0.16.05_20+build.1-v2.jar')
 //	ploceus.dependOsl(project.osl_version)
 }
 
