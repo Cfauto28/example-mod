@@ -1,9 +1,32 @@
-plugins {
-	id "java"
-	id 'maven-publish'
-	id 'net.fabricmc.fabric-loom-remap' version '1.17.17'
-	id 'ploceus' version '1.17.5'
+buildscript {
+    repositories {
+        mavenCentral()
+        flatDir {
+            dirs 'libs2'
+        }
+    }
+    dependencies {
+        classpath files('libs2/ploceus-1.17.local.jar')
+	//classpath files('libs2/fabric-loom-1.17.local.jar')
+        classpath files('libs2/signature-changer-1.0.0.jar')
+	classpath files('libs2/mapping-utils-0.19.2.jar')
+	classpath files('libs2/nester-1.4.0.jar')
+	classpath files('libs2/exceptor-1.1.0.jar')
+	classpath files('libs2/preen-1.1.0.jar')
+	classpath files('libs2/condor-1.4.5.jar')
+
+	classpath 'com.vdurmont:semver4j:3.1.0'
+    }
 }
+
+plugins {
+	id 'maven-publish'
+	id 'fabric-loom' version '1.17.17'
+	//id 'ploceus' version '1.17.local'
+}
+
+//apply plugin: 'fabric-loom'
+apply plugin: 'ploceus'
 
 base {
 	archivesName = project.archives_base_name
@@ -11,15 +34,10 @@ base {
 version = "${project.version}+mc${project.minecraft_version}"
 group = project.maven_group
 
-loom {
-	clientOnlyMinecraftJar()
-}
-
-ploceus {
-	setIntermediaryGeneration(2)
-}
-
 repositories {
+	//maven {
+	//	url = uri("${project.projectDir}/repo")
+	//}
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
@@ -27,15 +45,32 @@ repositories {
 	// for more information about repositories.
 }
 
+loom {
+	//getCustomMinecraftMetadata().set("http://127.0.0.1:5500/minecraft-info.json")
+	//getIntermediaryUrl().set("net.ornithemc:calamus-intermediary-gen2:a1.0.16.05_20")
+
+	clientOnlyMinecraftJar()
+	//noIntermediateMappings()
+}
+
+ploceus {
+	setIntermediaryGeneration(2)
+	disableLibraryUpgrades()
+	//disableLvtPatch()
+}
+
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-/*
+
 	exceptions ploceus.raven(project.raven_build)
 	signatures ploceus.sparrow(project.sparrow_build)
-	nests ploceus.nests(project.nests_build)*/
-	mappings files('libs/net/ornithemc/feather-gen2/a1.0.16.05_20+build.1/feather-gen2-a1.0.16.05_20+build.1-v2.jar')
-//	ploceus.dependOsl(project.osl_version)
+	nests ploceus.nests(project.nests_build)
+	/*mappings ploceus.featherMappings(project.feather_build)*/
+
+	mappings ("net.ornithemc:feather-gen2:a1.0.16.05_20+build.1-v2")
+
+	//ploceus.dependOsl(project.osl_version)
 }
 
 processResources {
