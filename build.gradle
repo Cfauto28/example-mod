@@ -49,7 +49,6 @@ loom {
 
 	clientOnlyMinecraftJar()
 	//noIntermediateMappings()
-	accessWidenerPath = file("src/main/resources/cypress_lib_core.classtweaker")
 
 }
 
