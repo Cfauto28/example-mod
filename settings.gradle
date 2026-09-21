@@ -16,6 +16,10 @@ pluginManagement {
 			name = 'Ornithe Snapshots'
 			url = 'https://maven.ornithemc.net/snapshots'
 		}*/
+		maven {
+			url = "https://maven.fentanylsolutions.org/github/"
+			name = "GitHub"
+		}
 		gradlePluginPortal()
 	}
 }

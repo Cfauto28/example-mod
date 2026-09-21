@@ -6,7 +6,7 @@ buildscript {
         }
     }
     dependencies {
-		classpath files('depLib/ploceus-1.17.local.jar')
+		classpath files('depLib/ploceus-1.18.1.jar')
 		classpath files('depLib/signature-changer-1.0.0.jar')
 		classpath files('depLib/mapping-utils-0.19.2.jar')
 		classpath files('depLib/nester-1.4.0.jar')
@@ -19,7 +19,7 @@ buildscript {
 
 plugins {
 	id 'maven-publish'
-	id 'fabric-loom' version '1.17.19'
+	id 'fabric-loom' version '1.18-SNAPSHOT'
 }
 
 apply plugin: 'ploceus'
@@ -42,7 +42,6 @@ loom {
 }
 
 ploceus {
-	setIntermediaryGeneration(2)
 	disableLibraryUpgrades()
 }
 
