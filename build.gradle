@@ -39,6 +39,11 @@ repositories {
 
 loom {
 	clientOnlyMinecraftJar()
+	runs {
+		configureEach {
+			systemProperties.put("fabric.gameVersion", "1.0.0-alpha.1.0.16.5.20")
+		}
+	}
 }
 
 ploceus {
